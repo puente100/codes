@@ -1,0 +1,203 @@
+#include <iostream>
+#include <stdlib.h>
+#include <conio.h>
+
+using namespace std;
+
+main() {
+    
+	char exercise, key;
+	char answer= 's';
+	
+	cout<<"Porgrama para mostrar un menú con opciones de ejercicios de las diferentes estructuras"<<endl;
+	do	{
+		cout<<"Seleccione uno de los siguientes ejercicios: "<<endl;
+		cout<<"1. Estructura Secuencial"<<endl;
+		cout<<"2. Estructura If-Else"<<endl;
+		cout<<"3. Estructura Switch"<<endl;
+		cout<<"4. Estructura For"<<endl;
+		cout<<"5. Estructura While"<<endl;
+		cout<<"6. Estructura Do-While"<<endl;
+		cout<<"7. Arreglos"<<endl;
+		cout<<"8. Salir"<<endl;
+		cin >> exercise;
+		system("cls");
+				
+		switch (exercise)
+		{
+			
+			case'1':
+				cout << "1. Estructura Secuencial\n\n"
+						"int count=1, n, sum=0, value;\n"
+						"Programa para contar la cantidad de numeros proporcionados por el usuario\n"					
+						"Introduzca la cantidad de numeros a sumar: \n"
+						"cin>> n;\n"
+						"while (count<=n){\n"
+						"	cout<< \"Introduce el numero \"<< count << \":\"<<endl;\n"	
+						"	cin>> value;\n"
+						"	sum=sum+value;\n"
+						"	count++;\n"
+						"}\n"
+						"	cout<<\"El total es: \"<<sum;\n"
+						"	return 0;"<<endl; 
+				break;
+				
+			case'2':
+			   cout << "2. Estructura If-Else\n\n"	
+			           "string password = \"\";\n"
+					   "cout << \"Ingrese la contrasenia: \";\n"
+					   "cin >> password;\n"
+					   "if(password == \"myClave\")\n"
+					   "{\n"
+					    "cout << \"Contrasenia correcta. Bienvenido\";\n"
+					   "}\n"
+					   "else"
+					   "{\n"
+					   "cout << \"Contrasenia incorrecta.\";\n"
+					   "}"<<endl;
+			   break;
+			   
+			case'3':  
+			    cout<< "3.Estructura Switch \n\n"
+			    "int age;\n"
+				"char gender, answer;\n "
+			
+			    "cout<<\"Porgrama para calcular el pago segun el genero y edad de la persona\"<<endl;\n"
+			
+				"do {\n "
+				"cout<< \"indique su genero: \"<<endl;\n"
+				"cout<< \"M) Mujer\"<<endl;\n"
+				"cout<< \"H) Hombre\"<<endl;\n"
+				"cin>>gender;\n"
+				
+				"cout<< \"Indique su edad\"<<endl;\n"
+				"cin>>age;\n"
+				
+				
+				"switch (gender) { \n"
+					"case'm': case 'M':\n"
+						"if (age <18){\n"
+							"cout<<\"La persona debera pagar $800 pesos\"<<endl;\n"	
+						"} else {\n"
+							"cout<<\"La persona debera pagar $500 pesos\"<<endl;\n"
+						"}\n" 
+						"break;\n"
+						
+					 "case 'h': case 'H':\n "
+						"if (age <25 ){\n"
+							"cout<< \"La persona debera pagar $1000 pesos\"<<endl;\n"	
+						"}\n"	
+						"else {\n"
+							"cout<< \"La persona debera pagar $700 pesos\"<<endl;\n"	
+						"}\n"
+						"break;\n"
+				"}\n"
+				
+				"cout<< \"Desea ingresar otra persona? S/N \n\"<<endl;\n"
+				"cin>> answer;\n"	
+				
+				"} while(answer == 'S' || answer == 's');"<<endl;
+		    	break;	
+
+			case '4':
+			
+				cout<<"4. Estructura For\n\n"
+				"int main(){\n"
+ 	
+				"int numero, factorial =1;\n"
+				 
+				"cout<<\"Programa para calcular el factorial de un número dado\"<<endl;\n"
+				 
+				 	"cout<< \"Introduce un numero:\"<<endl;\n"
+				 	"cin>>numero;\n"
+				 	
+				 	"for(int i=1; i<=numero;i++){\n"
+				 		"factorial=factorial*i;\n"
+				 		
+					 "}\n"
+					 "cout<<\"El factorial del numero es: \"<<factorial <<endl;\n"
+	 
+	 				 "system (\"pause\");\n"
+	 			 "return 0;\n"
+				  "}\n"<<endl;	
+				  break;
+				  
+			case'5':
+				cout<<"5. Estructura While \n\n"	  
+			   "int num;\n"
+				"cout <<\"Este programa solicitará números hasta que el usuario escriba 0\" << endl;\n"
+				"cout << endl;\n"
+				"cout<< \"Escribe número enteros, cuando desees terminar, escribe cero\" << endl;\n"
+				"//num = 1;\n"
+				"while (num != 0)\n"
+				"{\n"
+				"cin >> num;\n"
+				"cout<<\"Escribiste:\" << num << endl << \"escribe 0 para terminar\" << endl;\n"
+				"}\n"
+				"out<<\"Escribiste 0, el ciclo while ha terminado\" << endl;\n"
+				"return 0;\n"
+				"}\n"<<endl;
+				break;
+			   
+			case '6':
+				cout<<"6. Estructura Do-While\n\n"  
+				"int main()\n"
+				"{\n"
+				  "int opcion = 0;\n"
+				    "do\n"
+				    "{\n"
+				        "cout << \"Ingrese 1 para mostrar mensaje\n\";\n"
+				        "cout << \"Ingrese 2 para hacer algo más\n\";\n"
+				        "cout << \"Ingrese 0 para salir\n\";\n"
+				
+				        "cout << \"Ingrese una opción a ejecutar\n\";\n"
+				        "cin >> opcion;\n"
+				    "}\n"
+				    "//Mostramos el menú hasta que la opción sea cero\n"
+				    "while(opcion != 0);\n"
+				    "system(\"PAUSE\");\n"
+				    "return 0;\n"
+				"}\n"<<endl;
+				break;
+				
+				
+				case '7':
+				cout<<"7. Arreglos" 
+				"int vector2[3];\n"
+					"vector2[0] = 1;\n"
+					"vector2[1] = 3;\n"
+					"vector2[2] = 10;\n"<<endl;
+				break;
+					
+			   			   
+			case '8':
+				cout << "Gracias por utilizar el sistema, ¡Hasta luego!. \n";
+				break;
+			default:
+				cout << "Opcion '" << exercise << "' incorrecta\n";
+				break;
+		}
+		
+		bool isTheAnswerValid ;
+	
+		if (exercise != '8') {
+			do {
+				cout << "Desea regresar al menu principal S/N:  "<<endl;
+				cin >> answer;
+				
+				if (answer != 'S' && answer != 's' && answer != 'N' && answer != 'n') {
+					cout << "\n**Opcion incorrecta!** \n";
+					isTheAnswerValid = false;
+					system("pause");
+				} else {
+					isTheAnswerValid = true;
+				}				
+				system("cls");
+			} while(isTheAnswerValid == false);
+		} 
+	
+	} while(exercise != '8' && (answer == 's' || answer == 'S'));
+	
+	system("pause");
+	
+}
